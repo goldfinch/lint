@@ -1,0 +1,17 @@
+{
+  "name": "goldfinch/lint",
+  "description": "Lint",
+  "keywords": ["lint"],
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Art Karasev",
+          "email": "art.karasev@proton.me"
+      }
+  ],
+  "require-dev": {
+    "laravel/pint": "^1.15"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
