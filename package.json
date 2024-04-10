@@ -1,8 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "eslint *.js themes",
-    "format": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}'"
+    "lint": "eslint *.js themes -c vendor/goldfinch/lint/eslint.config.js",
+    "format": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}' --config vendor/goldfinch/lint/.prettierrc"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
