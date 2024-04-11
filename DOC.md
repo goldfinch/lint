@@ -15,12 +15,12 @@ composer require --dev goldfinch/lint
         "postinstall": "husky install",
         "lint": "eslint *.js themes --config vendor/goldfinch/lint/eslint.config.js",
         "lint-fix": "eslint *.js themes --fix --config vendor/goldfinch/lint/eslint.config.js",
-        "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}'--config vendor/goldfinch/lint/.prettierrc",
-        "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}'--config vendor/goldfinch/lint/.prettierrc",
-        "format-app": "prettier --check 'app/**/*.{php,yml,json}'--config vendor/goldfinch/lint/.prettierrc",
-        "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}'--config vendor/goldfinch/lint/.prettierrc",
-        "format-themes": "prettier --check 'themes/**/*.ss'--config vendor/goldfinch/lint/.prettierrc",
-        "format-themes-fix": "prettier --write 'themes/**/*.ss'--config vendor/goldfinch/lint/.prettierrc"
+        "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}' --config vendor/goldfinch/lint/.prettierrc",
+        "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}' --config vendor/goldfinch/lint/.prettierrc",
+        "format-app": "prettier --check 'app/**/*.{php,yml,json}' --config vendor/goldfinch/lint/.prettierrc",
+        "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}' --config vendor/goldfinch/lint/.prettierrc",
+        "format-themes": "prettier --check 'themes/**/*.ss' --config vendor/goldfinch/lint/.prettierrc",
+        "format-themes-fix": "prettier --write 'themes/**/*.ss' --config vendor/goldfinch/lint/.prettierrc"
     },
     "devDependencies": {
         "@prettier/plugin-php": "^0.22.2",
