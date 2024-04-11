@@ -72,6 +72,7 @@ composer require --dev goldfinch/lint
 ```bash
 cp vendor/goldfinch/lint/.prettierignore .prettierignore
 cp -r vendor/goldfinch/lint/.husky .husky
+npm i
 ```
 
 ## issues with
