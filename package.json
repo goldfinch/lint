@@ -1,8 +1,14 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "eslint *.js themes -c vendor/goldfinch/lint/eslint.config.js",
-    "format": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}' --config vendor/goldfinch/lint/.prettierrc"
+    "lint": "eslint *.js themes",
+    "lint-fix": "eslint *.js themes --fix",
+    "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}'",
+    "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}'",
+    "format-app": "prettier --check 'app/**/*.{php,yml,json}'",
+    "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}'",
+    "format-themes": "prettier --check 'themes/**/*.ss'",
+    "format-themes-fix": "prettier --write 'themes/**/*.ss'"
   },
   "devDependencies": {
     "eslint": "^9.0.0",

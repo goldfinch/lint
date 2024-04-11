@@ -9,9 +9,6 @@
           "email": "art.karasev@proton.me"
       }
   ],
-  "require-dev": {
-    "laravel/pint": "^1.15"
-  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
