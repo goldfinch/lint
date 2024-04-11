@@ -1,3 +1,9 @@
+## Install
+
+```bash
+composer require --dev goldfinch/lint
+```
+
 
 ### package.json
 
