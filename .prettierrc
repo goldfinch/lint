@@ -2,7 +2,6 @@
     "plugins": [
       "@prettier/plugin-php",
       "prettier-plugin-css-order",
-      "@ianvs/prettier-plugin-sort-imports",
       "prettier-plugin-organize-attributes"
     ],
     "printWidth": 120,
