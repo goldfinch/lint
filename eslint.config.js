@@ -3,6 +3,10 @@ import globals from 'globals';
 import vue from 'eslint-plugin-vue';
 import prettier from 'eslint-config-prettier';
 
+// Patch AudioWorkletGlobalScope
+const browserGlobals = { ...globals.browser };
+delete browserGlobals['AudioWorkletGlobalScope '];
+
 export default [
   js.configs.recommended,
   ...vue.configs['flat/essential'],
@@ -13,7 +17,12 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      globals: globals.browser,
+      globals: browserGlobals,
+      // globals: globals.browser,
+      // globals: {
+      //   ...browserGlobals,
+      //   ...globals.node,
+      // },
     },
     files: ['**/*.js', '**/*.vue'],
     plugins: {

@@ -23,6 +23,8 @@ composer require --dev goldfinch/lint
         "format-themes-fix": "prettier --write 'themes/**/*.ss' --config vendor/goldfinch/lint/.prettierrc"
     },
     "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
         "@prettier/plugin-php": "^0.22.2",
         "eslint": "^9.0.0",
         "eslint-config-prettier": "^9.1.0",
@@ -73,12 +75,4 @@ composer require --dev goldfinch/lint
 cp vendor/goldfinch/lint/.prettierignore .prettierignore
 cp -r vendor/goldfinch/lint/.husky .husky
 npm i
-```
-
-## issues with
-
-```
-"@ianvs/prettier-plugin-sort-imports": "^4.2.1",
-and
-@trivago/prettier-plugin-sort-imports
 ```
