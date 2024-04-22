@@ -3,7 +3,9 @@
     "@prettier/plugin-php",
     "prettier-plugin-css-order",
     "prettier-plugin-organize-attributes",
-    "@ianvs/prettier-plugin-sort-imports"
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-style-order",
+    "prettier-plugin-packagejson"
   ],
   "printWidth": 120,
   "tabWidth": 2,
