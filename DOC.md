@@ -55,11 +55,12 @@ composer require --dev goldfinch/lint
             "eslint --fix --config vendor/goldfinch/lint/eslint.config.js",
             "prettier --write --ignore-unknown --config vendor/goldfinch/lint/.prettierrc"
         ],
-        "**/*.{css,scss,json,yml,md}": [
+        "**/*.{json,yml,md}": [
             "prettier --write --ignore-unknown --config vendor/goldfinch/lint/.prettierrc"
         ],
         "**/*.{css,scss}": [
-            "stylelint --allow-empty-input --quiet --config vendor/goldfinch/lint/.stylelintrc.js --fix"
+            "prettier --write --ignore-unknown --config vendor/goldfinch/lint/.prettierrc",
+            "stylelint --allow-empty-input --config vendor/goldfinch/lint/.stylelintrc.js --fix"
         ],
         "**/*.php": [
             "vendor/bin/pint"
