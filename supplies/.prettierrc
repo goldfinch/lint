@@ -1,0 +1,45 @@
+{
+  "plugins": [
+    "@prettier/plugin-php",
+    "prettier-plugin-css-order",
+    "prettier-plugin-organize-attributes",
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-style-order",
+    "prettier-plugin-packagejson"
+  ],
+  "printWidth": 120,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "overrides": [
+    {
+      "files": ["*.yml", "*.yaml"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.php"],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ["*.json"],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.ss",
+      "options": {
+        "parser": "html",
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    }
+  ]
+}
