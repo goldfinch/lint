@@ -93,3 +93,11 @@ cp vendor/goldfinch/lint/.prettierignore .prettierignore
 cp -r vendor/goldfinch/lint/.husky .husky
 npm i
 ```
+
+
+# jq
+
+https://sher-chowdhury.medium.com/working-with-json-using-jq-ce06bae5545a
+https://www.baeldung.com/linux/jq-command-json
+https://spin.atomicobject.com/jq-creating-updating-json/
+https://michaelheap.com/set-value-with-jq/
