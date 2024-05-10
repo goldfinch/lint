@@ -31,11 +31,11 @@ read ANSWER
 case $ANSWER in
   [yY])
         composer require --dev laravel/pint
-        composer require --dev vimeo/psalm
 
         if [ "$PLATFORM" = "laravel" ]; then
             composer require larastan/larastan:^2.0 --dev
         elif [ "$PLATFORM" = "silverstripe" ]; then
+            composer require --dev vimeo/psalm
             composer require --dev phpstan/phpstan
         fi
     ;;
