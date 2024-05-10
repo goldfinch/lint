@@ -11,6 +11,7 @@ export default {
     'stylelint-config-clean-order',
   ],
   rules: {
+    'block-no-empty': null,
     'selector-class-pattern': [
       // support BEM
     	'^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$|^Mui.*$',

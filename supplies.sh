@@ -24,45 +24,71 @@ do
     esac
 done
 
-# # 2) Rest components for all
+# 2) Rest components for all
 
-# composer require --dev laravel/pint
-# composer require --dev vimeo/psalm
+echo -e "Install composer pacakges? (y/n)"
+read ANSWER
+case $ANSWER in
+  [yY])
+        composer require --dev laravel/pint
+        composer require --dev vimeo/psalm
 
-# # @sentry/tracing
-# # @sentry/vue
+        if [ "$PLATFORM" = "laravel" ]; then
+            composer require larastan/larastan:^2.0 --dev
+        elif [ "$PLATFORM" = "silverstripe" ]; then
+            composer require --dev phpstan/phpstan
+        fi
+    ;;
+  [nN])
+        echo "Composer packages skipped"
+    ;;
+esac
 
-# npm i -D husky
-# npm i -D lint-staged
+echo -e "Install node pacakges? (y/n)"
+read ANSWER
+case $ANSWER in
+  [yY])
 
-# npm i -D eslint
-# npm i -D eslint-config-prettier
-# npm i -D eslint-plugin-vue
-# npm i -D eslint-plugin-html
-# npm i -D eslint-plugin-prettier
+        # @sentry/tracing
+        # @sentry/vue
 
-# npm i -D prettier
-# npm i -D prettier-plugin-css-order
-# npm i -D prettier-plugin-organize-attributes
-# npm i -D prettier-plugin-packagejson
-# npm i -D prettier-plugin-style-order
-# npm i -D @prettier/plugin-php
-# npm i -D @ianvs/prettier-plugin-sort-imports
-# npm i -D @trivago/prettier-plugin-sort-imports
+        pnpm i -D husky
+        pnpm i -D lint-staged
 
-# npm i -D stylelint
-# npm i -D stylelint-order
-# npm i -D stylelint-config-html
-# npm i -D stylelint-config-clean-order
-# npm i -D stylelint-config-prettier-scss
-# npm i -D stylelint-config-recess-order
-# npm i -D stylelint-config-recommended-vue
-# npm i -D stylelint-config-standard-scss
+        pnpm i -D eslint
+        pnpm i -D eslint-config-prettier
+        pnpm i -D eslint-plugin-vue
+        pnpm i -D eslint-plugin-html
+        pnpm i -D eslint-plugin-prettier
 
-# npm i -D autoprefixer
-# npm i -D postcss
-# npm i -D postcss-import
-# npm i -D postcss-html
+        pnpm i -D prettier
+        pnpm i -D prettier-plugin-css-order
+        pnpm i -D prettier-plugin-organize-attributes
+        pnpm i -D prettier-plugin-packagejson
+        pnpm i -D prettier-plugin-style-order
+        pnpm i -D @prettier/plugin-php
+        pnpm i -D @prettier/plugin-xml
+        pnpm i -D @ianvs/prettier-plugin-sort-imports
+        pnpm i -D @trivago/prettier-plugin-sort-imports
+
+        pnpm i -D stylelint
+        pnpm i -D stylelint-order
+        pnpm i -D stylelint-config-html
+        pnpm i -D stylelint-config-clean-order
+        pnpm i -D stylelint-config-prettier-scss
+        pnpm i -D stylelint-config-recess-order
+        pnpm i -D stylelint-config-recommended-vue
+        pnpm i -D stylelint-config-standard-scss
+
+        pnpm i -D autoprefixer
+        pnpm i -D postcss
+        pnpm i -D postcss-import
+        pnpm i -D postcss-html
+    ;;
+  [nN])
+        echo "Node packages skipped"
+    ;;
+esac
 
 # 3) Copy supplies
 
@@ -84,7 +110,23 @@ done
 
 # 4) Update package.json
 
-FORMAT="prettier --check '**/*.{js,vue,css,scss,json,yml,md}'"
-cat <<< "$(jq --arg FORMAT "$FORMAT" '.scripts.format = $FORMAT' package.json)" > package.json
+# FORMAT="prettier --check '**/*.{js,vue,css,scss,json,yml,md}'"
+# cat <<< "$(jq --arg FORMAT "$FORMAT" '.scripts.format = $FORMAT' package.json)" > package.json
+cat <<< "$(jq -s '.[0] * .[1]' package.json vendor/goldfinch/lint/supplies/$PLATFORM/json/scripts.json)" > package.json
+cat <<< "$(jq -s '.[0] * .[1]' package.json vendor/goldfinch/lint/supplies/$PLATFORM/json/lint-staged.json)" > package.json
 
 # 5) Update composer.json
+
+# 6) Install husky
+
+echo -e "Install Husky? (y/n)"
+read ANSWER
+case $ANSWER in
+  [yY])
+        cp -R vendor/goldfinch/lint/supplies/.husky .husky
+        pnpm i
+    ;;
+  [nN])
+        echo "Husky install skipped"
+    ;;
+esac

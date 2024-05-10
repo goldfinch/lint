@@ -2,3 +2,9 @@ parameters:
     paths:
         - app
     level: 5
+    ignoreErrors:
+        # Global ignore of VCard properties access
+        - '#is never read, only written#'
+        - '#Call to an undefined method SilverStripe\\Forms\\FieldList::initFielder#'
+        - '#Call to an undefined method SilverStripe\\Forms\\FieldList::getFielder#'
+

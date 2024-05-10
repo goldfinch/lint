@@ -1,13 +1,18 @@
 {
-  "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}' --config vendor/goldfinch/lint/.prettierrc",
-  "format-app": "prettier --check 'app/**/*.{php,yml,json}' --config vendor/goldfinch/lint/.prettierrc",
-  "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}' --config vendor/goldfinch/lint/.prettierrc",
-  "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}' --config vendor/goldfinch/lint/.prettierrc",
-  "format-themes": "prettier --check 'themes/**/*.ss' --config vendor/goldfinch/lint/.prettierrc",
-  "format-themes-fix": "prettier --write 'themes/**/*.ss' --config vendor/goldfinch/lint/.prettierrc",
-  "postinstall": "husky install",
-  "lint": "eslint *.js themes --config vendor/goldfinch/lint/eslint.config.js",
-  "lint-fix": "eslint *.js themes --fix --config vendor/goldfinch/lint/eslint.config.js",
-  "lint-style": "stylelint themes/**/*.{scss,css} --config vendor/goldfinch/lint/.stylelintrc.js",
-  "lint-style-fix": "stylelint themes/**/*.{scss,css} --config vendor/goldfinch/lint/.stylelintrc.js --fix",
+  "scripts": {
+    "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}'",
+    "format-app": "prettier --check 'app/**/*.{php,yml,json}'",
+    "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}'",
+    "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}'",
+    "format-themes": "prettier --check 'themes/**/*.ss'",
+    "format-themes-fix": "prettier --write 'themes/**/*.ss'",
+    "postinstall": "husky install",
+    "lint": "eslint *.js themes",
+    "lint-fix": "eslint *.js themes --fix",
+    "lint-style": "stylelint themes/**/*.{scss,css}",
+    "lint-style-fix": "stylelint themes/**/*.{scss,css} --fix",
+    "test": "vendor/bin/phpstan && vendor/bin/psalm",
+    "phpstan": "vendor/bin/phpstan",
+    "psalm": "vendor/bin/psalm"
+  }
 }

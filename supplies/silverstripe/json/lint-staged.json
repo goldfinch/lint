@@ -1,16 +1,19 @@
 {
-  "*.js|themes/**/*.{vue,js}": [
-      "eslint --fix --config vendor/goldfinch/lint/eslint.config.js",
-      "prettier --write --ignore-unknown --config vendor/goldfinch/lint/.prettierrc"
-  ],
-  "**/*.{json,yml,md}": [
-      "prettier --write --ignore-unknown --config vendor/goldfinch/lint/.prettierrc"
-  ],
-  "**/*.{css,scss}": [
-      "prettier --write --ignore-unknown --config vendor/goldfinch/lint/.prettierrc",
-      "stylelint --allow-empty-input --config vendor/goldfinch/lint/.stylelintrc.js --fix"
-  ],
-  "**/*.php": [
-      "vendor/bin/pint"
-  ]
+    "lint-staged": {
+        "*.js|themes/**/*.{vue,js}": [
+            "eslint --fix",
+            "prettier --write --ignore-unknown"
+        ],
+        "**/*.{json,yml,md}": [
+            "prettier --write --ignore-unknown"
+        ],
+        "**/*.{css,scss}": [
+            "prettier --write --ignore-unknown",
+            "stylelint --allow-empty-input --fix"
+        ],
+        "**/*.php": [
+            "prettier --write --ignore-unknown",
+            "vendor/bin/pint"
+        ]
+    }
 }
