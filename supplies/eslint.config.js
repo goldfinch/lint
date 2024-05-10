@@ -73,4 +73,7 @@ export default [
       ],
     },
   },
+  {
+    ignores: ['node_modules/*', 'dist/*', 'pnpm-lock.yaml', '.github/*', '*.config.ts', '**/*.d.ts'],
+  }
 ];

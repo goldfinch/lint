@@ -55,6 +55,7 @@ case $ANSWER in
         pnpm i -D husky
         pnpm i -D lint-staged
 
+        pnpm i -D globals # fix `Cannot find package 'globals' imported from eslint.config.js`
         pnpm i -D eslint
         pnpm i -D eslint-config-prettier
         pnpm i -D eslint-plugin-vue
