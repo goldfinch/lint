@@ -1,19 +1,11 @@
 {
-  "lint-staged": {
-    "*.js|resources/**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
-      "prettier --write --ignore-unknown",
-      "eslint --fix"
-    ],
-    "**/*.{json,yml,md}": [
-      "prettier --write --ignore-unknown"
-    ],
-    "**/*.{css,scss}": [
-      "prettier --write --ignore-unknown",
-      "stylelint --allow-empty-input --fix"
-    ],
-    "**/*.php": [
-      "prettier --write --ignore-unknown",
-      "vendor/bin/pint"
-    ]
-  }
+    "lint-staged": {
+        "*.js|resources/**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+            "prettier --write --ignore-unknown",
+            "eslint --fix"
+        ],
+        "**/*.{json,yml,md}": ["prettier --write --ignore-unknown"],
+        "**/*.{css,scss}": ["prettier --write --ignore-unknown", "stylelint --allow-empty-input --fix"],
+        "**/*.php": ["prettier --write --ignore-unknown", "vendor/bin/pint"]
+    }
 }

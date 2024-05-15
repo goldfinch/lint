@@ -1,18 +1,18 @@
 {
-  "scripts": {
-    "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}'",
-    "format-app": "prettier --check 'app/**/*.{php,yml,json}'",
-    "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}'",
-    "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}'",
-    "format-themes": "prettier --check 'resources/**/*.blade.php'",
-    "format-themes-fix": "prettier --write 'resources/**/*.blade.php'",
-    "postinstall": "husky install",
-    "lint": "eslint resources --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
-    "lint-fix": "eslint resources --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "lint-style": "stylelint resources/**/*.{scss,css}",
-    "lint-style-fix": "stylelint resources/**/*.{scss,css} --fix",
-    "test": "vendor/bin/phpstan && vendor/bin/psalm",
-    "phpstan": "vendor/bin/phpstan",
-    "psalm": "vendor/bin/psalm"
-  }
+    "scripts": {
+        "format": "prettier --check '**/*.{js,vue,css,scss,json,yml,md}'",
+        "format-app": "prettier --check 'app/**/*.{php,yml,json}'",
+        "format-app-fix": "prettier --write 'app/**/*.{php,yml,json}'",
+        "format-fix": "prettier --write '**/*.{js,vue,css,scss,json,yml,md}'",
+        "format-themes": "prettier --check 'resources/**/*.blade.php'",
+        "format-themes-fix": "prettier --write 'resources/**/*.blade.php'",
+        "postinstall": "husky install",
+        "lint": "eslint resources --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
+        "lint-fix": "eslint resources --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+        "lint-style": "stylelint resources/**/*.{scss,css}",
+        "lint-style-fix": "stylelint resources/**/*.{scss,css} --fix",
+        "test": "vendor/bin/phpstan && vendor/bin/psalm",
+        "phpstan": "vendor/bin/phpstan",
+        "psalm": "vendor/bin/psalm"
+    }
 }

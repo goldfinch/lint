@@ -1,13 +1,15 @@
 {
   "name": "goldfinch/lint",
   "description": "Lint",
-  "keywords": ["lint"],
+  "keywords": [
+    "lint"
+  ],
   "license": "MIT",
   "authors": [
-      {
-          "name": "Art Karasev",
-          "email": "art.karasev@proton.me"
-      }
+    {
+      "name": "Art Karasev",
+      "email": "art.karasev@proton.me"
+    }
   ],
   "minimum-stability": "dev",
   "prefer-stable": true
