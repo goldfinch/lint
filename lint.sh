@@ -55,12 +55,22 @@ case $ANSWER in
         pnpm i -D husky
         pnpm i -D lint-staged
 
-        pnpm i -D globals # fix `Cannot find package 'globals' imported from eslint.config.js`
-        pnpm i -D eslint
+        # pnpm i -D globals # fix `Cannot find package 'globals' imported from eslint.config.js`
+        pnpm i -D eslint@8.57.0
+        pnpm i -D eslint-plugin-vue@9.24.1
         pnpm i -D eslint-config-prettier
-        pnpm i -D eslint-plugin-vue
         pnpm i -D eslint-plugin-html
         pnpm i -D eslint-plugin-prettier
+
+        pnpm i -D @rushstack/eslint-patch@^1.8.0
+        pnpm i -D @stylistic/eslint-plugin@^1.5.4
+        pnpm i -D @typescript-eslint/eslint-plugin@7.6.0
+        pnpm i -D @vue/eslint-config-prettier@^9.0.0
+        pnpm i -D @vue/eslint-config-typescript@^13.0.0
+        pnpm i -D eslint-plugin-vuejs-accessibility@2.2.1
+        pnpm i -D eslint-plugin-tailwindcss@3.15.1
+        pnpm i -D eslint-plugin-cypress@^2.15.1
+        pnpm i -D eslint-plugin-sonarjs@^0.25.1
 
         pnpm i -D prettier
         pnpm i -D prettier-plugin-css-order
@@ -95,7 +105,7 @@ esac
 
 LINT_DIR=vendor/goldfinch/lint/supplies/;
 
-COMMON_SUPPLIES=( .prettierrc eslint.config.js .stylelintrc.js )
+COMMON_SUPPLIES=( .prettierrc .eslintrc.cjs .stylelintrc.js )
 
 PLATFORM_SUPPLIES=( .prettierignore postcss.config.js phpstan.neon pint.json psalm.xml )
 
@@ -115,6 +125,7 @@ done
 # cat <<< "$(jq --arg FORMAT "$FORMAT" '.scripts.format = $FORMAT' package.json)" > package.json
 cat <<< "$(jq -s '.[0] * .[1]' package.json vendor/goldfinch/lint/supplies/$PLATFORM/json/scripts.json)" > package.json
 cat <<< "$(jq -s '.[0] * .[1]' package.json vendor/goldfinch/lint/supplies/$PLATFORM/json/lint-staged.json)" > package.json
+cat <<< "$(jq -s '.[0] * .[1]' package.json vendor/goldfinch/lint/supplies/json/pnpm.json)" > package.json
 
 # 5) Update composer.json
 

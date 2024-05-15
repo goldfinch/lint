@@ -1,0 +1,13 @@
+{
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "postcss",
+        "vue",
+        "vite",
+        "@unhead/vue",
+        "webpack"
+      ]
+    }
+  }
+}

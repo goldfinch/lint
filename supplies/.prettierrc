@@ -9,11 +9,12 @@
   ],
   "printWidth": 120,
   "tabWidth": 2,
-  "trailingComma": "all",
+  "trailingComma": "none",
   "singleQuote": true,
-  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
+  "semi": true,
+  "importOrder": ["^@core/(.*)$", "", "^@server/(.*)$", "", "^@ui/(.*)$", "", "^[./]"],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderTypeScriptVersion": "5.0.0",
   "overrides": [
     {
       "files": ["*.yml", "*.yaml"],
