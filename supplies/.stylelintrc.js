@@ -24,5 +24,9 @@ export default {
       emptyLineBefore: 'never',
       noEmptyLineBetween: true
     }))
-  }
+  },
+  ignoreFiles: [
+    '**/node_modules/**/*.{css,scss}',
+    '**/dist/**/*.{css,scss}',
+  ]
 }
