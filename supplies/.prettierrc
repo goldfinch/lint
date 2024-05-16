@@ -10,7 +10,6 @@
   ],
   "printWidth": 120,
   "tabWidth": 2,
-  "trailingComma": "none",
   "singleQuote": true,
   "semi": false,
   "importOrder": ["^@core/(.*)$", "", "^@server/(.*)$", "", "^@ui/(.*)$", "", "^[./]"],

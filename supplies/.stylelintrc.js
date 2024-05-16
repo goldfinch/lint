@@ -25,8 +25,5 @@ export default {
       noEmptyLineBetween: true
     }))
   },
-  ignoreFiles: [
-    '**/node_modules/**/*.{css,scss}',
-    '**/dist/**/*.{css,scss}',
-  ]
+  ignoreFiles: ['**/node_modules/**/*.{css,scss}', '**/dist/**/*.{css,scss}']
 }

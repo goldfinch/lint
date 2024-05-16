@@ -51,11 +51,7 @@ module.exports = {
     {
       files: ['*.ts'],
       plugins: ['sonarjs', '@typescript-eslint', '@stylistic'],
-      extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:sonarjs/recommended',
-      ],
+      extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:sonarjs/recommended'],
       parserOptions: {
         ecmaVersion: 'latest',
         parser: '@typescript-eslint/parser',
