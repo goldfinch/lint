@@ -1,0 +1,11 @@
+.vscode
+node_modules
+dist
+public/build
+vendor
+composer.lock
+package-lock.json
+pnpm-lock.yaml
+.github
+
+.graphql-generated

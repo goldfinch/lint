@@ -105,9 +105,9 @@ esac
 
 LINT_DIR=vendor/goldfinch/lint/supplies/;
 
-COMMON_SUPPLIES=( .prettierrc .eslintrc.cjs .stylelintrc.js .stylelintignore )
+COMMON_SUPPLIES=( .prettierrc .eslintrc.cjs .stylelintrc.js )
 
-PLATFORM_SUPPLIES=( .prettierignore .eslintignore postcss.config.js phpstan.neon pint.json psalm.xml )
+PLATFORM_SUPPLIES=( .prettierignore .eslintignore .stylelintignore postcss.config.js phpstan.neon pint.json psalm.xml )
 
 for i in "${COMMON_SUPPLIES[@]}"
 do
