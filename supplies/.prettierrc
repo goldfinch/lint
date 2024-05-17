@@ -6,7 +6,8 @@
     "prettier-plugin-organize-attributes",
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-style-order",
-    "prettier-plugin-packagejson"
+    "prettier-plugin-packagejson",
+    "prettier-plugin-tailwindcss"
   ],
   "printWidth": 120,
   "tabWidth": 2,
