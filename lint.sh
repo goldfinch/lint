@@ -82,6 +82,7 @@ case $ANSWER in
         pnpm i -D @ianvs/prettier-plugin-sort-imports
         pnpm i -D @trivago/prettier-plugin-sort-imports
         pnpm i -D prettier-plugin-tailwindcss
+        pnpm i -D @awmottaz/prettier-plugin-void-html
 
         pnpm i -D stylelint
         pnpm i -D stylelint-order
